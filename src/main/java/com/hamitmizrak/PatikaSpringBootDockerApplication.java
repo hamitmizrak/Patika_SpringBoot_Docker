@@ -18,12 +18,24 @@ import org.springframework.jdbc.core.JdbcTemplate;
 
 @EnableJpaAuditing(auditorAwareRef = "auditorAware")
 @Log4j2
-public class PatikaSpringBootDockerApplication  {
+public class PatikaSpringBootDockerApplication implements CommandLineRunner {
 
     public static void main(String[] args) {
         SpringApplication.run(PatikaSpringBootDockerApplication.class, args);
     }
 
 
+    // Otomatik datalar oluşturmak
+    @Autowired
+    private JdbcTemplate jdbcTemplate;
 
+    @Override
+    public void run(String... args) throws Exception {
+        String sql = "INSERT INTO product (product_name, product_trade) VALUES ("
+                + "'Ürün adı', 'bilgisayar')";
+        int rows = jdbcTemplate.update(sql);
+        if (rows > 0) {
+            log.info("Product tablosuna ekleme tamamdır");
+        }
+    }
 }
