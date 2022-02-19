@@ -8,8 +8,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.jdbc.core.JdbcTemplate;
 
+//security dahil etmemeeekkk icin
+@SpringBootApplication(exclude =
+{
+        org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration.class,
+        org.springframework.boot.actuate.autoconfigure.security.servlet.ManagementWebSecurityAutoConfiguration.class
+}
+)
 
-@SpringBootApplication
 @EnableJpaAuditing(auditorAwareRef = "auditorAware")
 @Log4j2
 public class PatikaSpringBootDockerApplication  {
@@ -17,5 +23,7 @@ public class PatikaSpringBootDockerApplication  {
     public static void main(String[] args) {
         SpringApplication.run(PatikaSpringBootDockerApplication.class, args);
     }
+
+
 
 }
