@@ -30,7 +30,6 @@
     </properties>
 
     <dependencies>
-
         <!-- swagger open-api-3.0-->
         <dependency>
             <groupId>org.springdoc</groupId>
@@ -52,17 +51,17 @@
         </dependency>
 
         <!--h2DB-->
-       <!-- <dependency>
+        <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <scope>runtime</scope>
-        </dependency>-->
+        </dependency>
 
-        <dependency>
+      <!--  <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <scope>runtime</scope>
-        </dependency>
+        </dependency>-->
 
         <!-- <dependency>
              <groupId>mysql</groupId>
