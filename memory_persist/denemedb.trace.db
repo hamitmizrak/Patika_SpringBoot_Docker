@@ -1,0 +1,3 @@
+2022-02-19 15:22:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PRODUCT" not found; SQL statement:
+INSERT INTO product (product_name, product_trade) VALUES ('Ürün adı', 'bilgisayar') [42102-200]
