@@ -1,4 +1,5 @@
-/memory_persist/
+/memory_persist/denemedb.mv.db
+/memory_persist/denemedb.trace.db
 
 HELP.md
 target/
