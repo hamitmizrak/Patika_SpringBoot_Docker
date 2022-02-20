@@ -33,21 +33,20 @@
     </properties>
 
     <dependencies>
-
-        <!-- Jupiter-->
+        <!--TEST-->
+        <!--spring-boot-test-->
         <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-            <version>${junit.jupiter.api}</version>
         </dependency>
 
-        <!--spring-boot-test-->
-         <dependency>
-          <groupId>org.springframework.boot</groupId>
-          <artifactId>spring-boot-starter-test</artifactId>
-          <scope>test</scope>
-      </dependency>
+        <!-- model mapper -->
+        <!-- <dependency>
+             <groupId>org.modelmapper</groupId>
+             <artifactId>modelmapper</artifactId>
+             <version>2.4.4</version>
+         </dependency>-->
 
         <!-- swagger open-api-3.0-->
         <dependency>
@@ -76,24 +75,26 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- <dependency>
-             <groupId>mysql</groupId>
-             <artifactId>mysql-connector-java</artifactId>
-             <scope>runtime</scope>
-         </dependency>-->
+        <!--postgresql-->
+        <!--    <dependency>
+                <groupId>org.postgresql</groupId>
+                <artifactId>postgresql</artifactId>
+                <scope>runtime</scope>
+            </dependency>-->
 
-        <!-- model mapper -->
-       <!-- <dependency>
-            <groupId>org.modelmapper</groupId>
-            <artifactId>modelmapper</artifactId>
-            <version>2.4.4</version>
-        </dependency>-->
+        <!--Mysql-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
 
         <!-- Jdbc -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jdbc</artifactId>
         </dependency>
+
 
         <!--Validation-->
         <dependency>
